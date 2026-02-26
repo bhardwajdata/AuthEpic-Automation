@@ -1,0 +1,38 @@
+name: Playwright Tests with Github Actions
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  test:
+    timeout-minutes: 90
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: List contains of working directory
+        run: ls -R            
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: ./Epico
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+        working-directory: ./Epico
+
+      - name: Run Playwright tests
+        run: npx playwright test ./Epico/tests/runner.spec.js --reporter=list,html --output=playwright-report/
+        working-directory: ./Epico
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: playwright-report
+          path: ./Epico/playwright-report/
+          retention-days: 30
