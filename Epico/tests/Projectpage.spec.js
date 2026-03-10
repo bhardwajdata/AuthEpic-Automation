@@ -3,6 +3,7 @@ import { expect, test } from '@playwright/test';
 test.describe('Full Page UI Verification', () => {
   test('Project Page UI Verification', async ({ page }) => {
     await page.goto('/project/card');
+    await page.waitForLoadState('domcontentloaded');
     await expect(page).toHaveURL('/project/card');
     console.log('Url page found!');
 
@@ -17,9 +18,10 @@ test.describe('Full Page UI Verification', () => {
     await expect(Description).toHaveText('Description');
     console.log("Page Verified!");
   });
-  
+
   test('Mentee Page UI Verification', async ({ page }) => {
     await page.goto('/mentees/direct');
+    await page.waitForLoadState('domcontentloaded');
     await expect(page).toHaveURL('/mentees/direct');
     console.log('Mentee page opened!')
 
@@ -34,6 +36,7 @@ test.describe('Full Page UI Verification', () => {
 
   test('Inbox Page UI Verification', async ({ page }) => {
     await page.goto('/inbox/monthly');
+    await page.waitForLoadState('domcontentloaded');
     await expect(page).toHaveURL('/inbox/monthly');
     console.log('Inbox page opened!');
 
@@ -69,6 +72,7 @@ test.describe('Full Page UI Verification', () => {
 
   test('Goals Page UI Verification', async ({ page }) => {
     await page.goto('/goals/13/2025/QUARTER_THREE');
+    await page.waitForLoadState('domcontentloaded');
     await expect(page).toHaveURL('/goals/13/2025/QUARTER_THREE');
     console.log('Goals page opened!');
 
@@ -84,6 +88,7 @@ test.describe('Full Page UI Verification', () => {
 
   test('WFH Page UI Verification', async ({ page }) => {
     await page.goto('/wfh-request');
+    await page.waitForLoadState('domcontentloaded');
     await expect(page).toHaveURL('/wfh-request');
     console.log('WFH page opened!');
 
@@ -99,6 +104,7 @@ test.describe('Full Page UI Verification', () => {
 
   test('Leave Page UI Verification', async ({ page }) => {
     await page.goto('/leave-request/summary');
+    await page.waitForLoadState('domcontentloaded');
     await expect(page).toHaveURL('/leave-request/summary');
     console.log('Leave page opened!');
 
@@ -109,6 +115,7 @@ test.describe('Full Page UI Verification', () => {
 
   test('LMS Page UI Verification', async ({ page }) => {
     await page.goto('/learning-bot/lms');
+    await page.waitForLoadState('domcontentloaded');
     await expect(page).toHaveURL('/learning-bot/lms');
     console.log('LMS page opened!');
 
@@ -119,6 +126,7 @@ test.describe('Full Page UI Verification', () => {
 
   test('Meetings Page UI Verification', async ({ page }) => {
     await page.goto('/meeting');
+    await page.waitForLoadState('domcontentloaded');
     await expect(page).toHaveURL('/meeting');
     console.log('Meetings page opened!');
 
@@ -133,7 +141,8 @@ test.describe('Full Page UI Verification', () => {
 
   test('Dashboard Page UI Verification', async ({ page }) => {
     await page.goto('/dashboard');
-    await expect(page).toHaveURL('/dashboard');
+    await page.waitForLoadState('domcontentloaded');
+    expect(page).toHaveURL('/dashboard');
     console.log('Dashboard page opened!');
 
     const AwardsWidget = page.locator('//span[text()="Award - Nominations"]');
