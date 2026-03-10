@@ -10,19 +10,27 @@ export default defineConfig({
   globalSetup: './tests/setup.js',
 
   /* Run tests in files in parallel */
-  fullyParallel: false,
+  fullyParallel: true,
 
   /* Fail the build on CI if you accidentally left test.only */
+  workers: process.env.CI ? 3 : 4,
+  /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
-
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
 
-  /* Opt out of parallel tests on CI */
-  workers: process.env.CI ? 1 : undefined,
+  // reporter: 'html',
 
-  /* Reporter */
-  reporter: 'html',
+  reporter: [
+    ['list'],
+    ['playwright-smart-reporter', {
+      outputFolder: 'test-results',
+      filename: 'report.html',
+      open: 'never'
+    }]
+  ],
+
+
 
   /* Shared settings */
   use: {
@@ -49,18 +57,18 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
 
-/*
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
-
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
-
-    /* Test against mobile viewports. */
+    /*
+        {
+          name: 'firefox',
+          use: { ...devices['Desktop Firefox'] },
+        },
+    
+        {
+          name: 'webkit',
+          use: { ...devices['Desktop Safari'] },
+        },
+    
+        /* Test against mobile viewports. */
     // {
     //   name: 'Mobile Chrome',
     //   use: { ...devices['Pixel 5'] },
