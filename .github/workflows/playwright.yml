@@ -56,7 +56,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: Epico/tests/index.html
+          publish_dir: Epico/tests/
           publish_branch: gh-pages
           force_orphan: true
 
