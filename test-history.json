@@ -1,0 +1,100 @@
+{
+  "runs": [],
+  "tests": {
+    "[chromium] Projectpage.spec.js::Mentee Page UI Verification": [
+      {
+        "passed": false,
+        "duration": 8027,
+        "timestamp": "2026-03-15T04:37:49.951Z",
+        "skipped": false,
+        "retry": 2
+      }
+    ],
+    "[chromium] Projectpage.spec.js::Inbox Page UI Verification": [
+      {
+        "passed": false,
+        "duration": 8229,
+        "timestamp": "2026-03-15T04:37:49.951Z",
+        "skipped": false,
+        "retry": 2
+      }
+    ],
+    "[chromium] Projectpage.spec.js::Project Page UI Verification": [
+      {
+        "passed": false,
+        "duration": 8443,
+        "timestamp": "2026-03-15T04:37:49.951Z",
+        "skipped": false,
+        "retry": 2
+      }
+    ],
+    "[chromium] Projectpage.spec.js::Goals Page UI Verification": [
+      {
+        "passed": true,
+        "duration": 2054,
+        "timestamp": "2026-03-15T04:37:49.951Z",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Projectpage.spec.js::Leave Page UI Verification": [
+      {
+        "passed": false,
+        "duration": 7368,
+        "timestamp": "2026-03-15T04:37:49.951Z",
+        "skipped": false,
+        "retry": 2
+      }
+    ],
+    "[chromium] Projectpage.spec.js::LMS Page UI Verification": [
+      {
+        "passed": false,
+        "duration": 14492,
+        "timestamp": "2026-03-15T04:37:49.951Z",
+        "skipped": false,
+        "retry": 2
+      }
+    ],
+    "[chromium] Projectpage.spec.js::Dashboard Page UI Verification": [
+      {
+        "passed": false,
+        "duration": 8306,
+        "timestamp": "2026-03-15T04:37:49.951Z",
+        "skipped": false,
+        "retry": 2
+      }
+    ],
+    "[chromium] Projectpage.spec.js::WFH Page UI Verification": [
+      {
+        "passed": false,
+        "duration": 7368,
+        "timestamp": "2026-03-15T04:37:49.951Z",
+        "skipped": false,
+        "retry": 2
+      }
+    ],
+    "[chromium] Projectpage.spec.js::Meetings Page UI Verification": [
+      {
+        "passed": false,
+        "duration": 150392,
+        "timestamp": "2026-03-15T04:37:49.951Z",
+        "skipped": false,
+        "retry": 2
+      }
+    ]
+  },
+  "summaries": [
+    {
+      "runId": "run-1773549095161",
+      "timestamp": "2026-03-15T04:31:35.161Z",
+      "total": 9,
+      "passed": 1,
+      "failed": 8,
+      "skipped": 0,
+      "flaky": 0,
+      "slow": 0,
+      "duration": 374790,
+      "passRate": 11
+    }
+  ]
+}
