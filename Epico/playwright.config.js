@@ -8,7 +8,6 @@ export default defineConfig({
 
   // 🔐 GLOBAL AUTH SETUP
   globalSetup: './tests/setup.js',
-
   /* Run tests in files in parallel */
   fullyParallel: true,
 
