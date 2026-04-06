@@ -20,13 +20,13 @@ export default async function setup() {
   console.log(' Wait until project page is visible.');
 
   try {
-  await page.waitForURL('**/project/card', {
-    timeout: 120000, 
-  });
-} catch {
-  await browser.close();
-  throw new Error('❌ Login not completed in time. Auth state not saved.');
-}
+    await page.waitForURL('**/project/card', {
+      timeout: 120000,
+    });
+  } catch {
+    await browser.close();
+    throw new Error('❌ Login not completed in time. Auth state not saved.');
+  }
 
   // Save authenticated state
   fs.mkdirSync(path.dirname(AUTH_PATH), { recursive: true });

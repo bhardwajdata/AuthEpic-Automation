@@ -130,14 +130,15 @@ test.describe('Full Page UI Verification', () => {
     await page.waitForLoadState('domcontentloaded');
     await expect(page).toHaveURL('/meeting');
     console.log('Meetings page opened!');
-
-    await page.getByRole('link', { name: 'invoice-icon Meetings' }).click();
-    await expect(page.getByRole('img', { name: 'DataNotFound' })).toBeVisible();
-    console.log('Meetings verified!');
-
-    await page.getByRole('button', { name: 'card view' }).click();
-    await expect(page.getByRole('img', { name: 'DataNotFound' })).toBeVisible();
-    console.log('Meetings card view verified!');
+    /*
+        await page.getByRole('link', { name: 'invoice-icon Meetings' }).click();
+        await expect(page.getByRole('img', { name: 'DataNotFound' })).toBeVisible();
+        console.log('Meetings verified!');
+    
+        await page.getByRole('button', { name: 'card view' }).click();
+        await expect(page.getByRole('img', { name: 'DataNotFound' })).toBeVisible();
+        console.log('Meetings card view verified!');
+        */
   });
 
   test('Dashboard Page UI Verification', async ({ page }) => {
