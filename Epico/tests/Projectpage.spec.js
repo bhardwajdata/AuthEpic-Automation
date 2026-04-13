@@ -26,11 +26,11 @@ test.describe('Full Page UI Verification', () => {
     console.log('Mentee page opened!')
 
     const MName = page.locator('(//div[@class="w-full overflow-hidden truncate MuiBox-root css-0"])[3]');
-    await expect(MName).toHaveText('Nikeeta Soni');
+    await expect(MName).toHaveText('Akshay Khandale');
     console.log('Mentee Name Verified!')
 
     const MEmail = page.locator('(//div[@class="w-full overflow-hidden truncate MuiBox-root css-0"])[4]');
-    await expect(MEmail).toHaveText('nikeeta.soni@mindbowser.com');
+    await expect(MEmail).toHaveText('akshay.khandale@mindbowser.com');
     console.log('Mentee mail verified!');
   });
 
@@ -39,11 +39,6 @@ test.describe('Full Page UI Verification', () => {
     await page.waitForLoadState('domcontentloaded');
     await expect(page).toHaveURL('/inbox/monthly');
     console.log('Inbox page opened!');
-    /*
-        await expect(page.getByText('To-do')).toBeVisible();
-        await expect(page.getByRole('main')).toMatchAriaSnapshot(`- text: No results found!`);
-        console.log('To-do tab verified!');
-        */
 
     page.getByRole('combobox', { name: 'To-do' }).click();
     await page.getByRole('option', { name: 'Submitted' }).click();
