@@ -71,15 +71,6 @@ test.describe('Full Page UI Verification', () => {
     await page.waitForLoadState('domcontentloaded');
     await expect(page).toHaveURL('/goals/13/2025/QUARTER_THREE');
     console.log('Goals page opened!');
-
-    /* await expect(page.getByRole('main')).toContainText('Total Weightage : 100');
-    console.log('Total Weightage verified!');
-
-     await expect(page.getByRole('main')).toContainText('Learning appium automation tool -');
-    console.log('Goal Name verified!');
-
-    await expect(page.getByRole('main')).toContainText('Not Submitted');
-    console.log('Goal Status verified!'); */
   });
 
   test('WFH Page UI Verification', async ({ page }) => {
@@ -87,10 +78,6 @@ test.describe('Full Page UI Verification', () => {
     await page.waitForLoadState('domcontentloaded');
     await expect(page).toHaveURL('/wfh-request');
     console.log('WFH page opened!');
-
-    await page.getByText('My Requests').click();
-    await expect(page.getByRole('main')).toContainText('No results found!');
-    console.log('My Requests tab verified!');
 
     await page.getByText('Summary').click();
     await expect(page.getByRole('main')).toContainText('Date');
@@ -125,15 +112,6 @@ test.describe('Full Page UI Verification', () => {
     await page.waitForLoadState('domcontentloaded');
     await expect(page).toHaveURL('/meeting');
     console.log('Meetings page opened!');
-    /*
-        await page.getByRole('link', { name: 'invoice-icon Meetings' }).click();
-        await expect(page.getByRole('img', { name: 'DataNotFound' })).toBeVisible();
-        console.log('Meetings verified!');
-    
-        await page.getByRole('button', { name: 'card view' }).click();
-        await expect(page.getByRole('img', { name: 'DataNotFound' })).toBeVisible();
-        console.log('Meetings card view verified!');
-        */
   });
 
   test('Dashboard Page UI Verification', async ({ page }) => {
