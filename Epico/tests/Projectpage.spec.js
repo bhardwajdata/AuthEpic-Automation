@@ -124,6 +124,7 @@ test.describe('Full Page UI Verification', () => {
     await expect(AwardsWidget).toBeVisible();
     console.log('Awards Nomination verified!');
 
+    await page.waitForLoadState('networkidle')
     const NominationButton = page.locator('//span[text()="Nominate"]');
     await expect(NominationButton).toBeEnabled();
 
