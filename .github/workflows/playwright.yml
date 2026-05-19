@@ -6,11 +6,12 @@ on:
     - cron: '0 2 * * *'
 
 permissions:
+  actions: write
   contents: write    
   
 jobs:
   E2E:
-    timeout-minutes: 90
+    timeout-minutes: 60
     runs-on: ubuntu-latest
 
     steps:
@@ -82,4 +83,13 @@ jobs:
             Regards,
             Epico CI/CD Automation Bot
           to: ${{ secrets.Mail_Username }}
-          from: ${{ secrets.EMAIL_USER }}    
+          from: ${{ secrets.EMAIL_USER }}  
+
+      - name: Cleanup old workflow runs
+        if: always()
+        uses: Mattraks/delete-workflow-runs@v2
+        with:
+          token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          retain_days: 28
+          keep_minimum_runs: 5
