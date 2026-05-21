@@ -16,14 +16,14 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: '22'
 
-      - name: List contains of working directory
+      - name: List contents of working directory
         run: ls -R            
 
       - name: Install dependencies
@@ -37,7 +37,6 @@ jobs:
       - name: Run Playwright tests
         run: npx playwright test ./tests/runner.spec.js --reporter=list,playwright-smart-reporter --output=test-results/
         working-directory: ./Epico
-        continue-on-error: true
 
       - name: Prepare report for Pages
         if: always()
@@ -85,11 +84,15 @@ jobs:
           to: ${{ secrets.Mail_Username }}
           from: ${{ secrets.EMAIL_USER }}  
 
+  cleanup-old-workflow-runs:
+    needs: E2E
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
       - name: Cleanup old workflow runs
-        if: always()
         uses: Mattraks/delete-workflow-runs@v2
         with:
           token: ${{ github.token }}
           repository: ${{ github.repository }}
-          retain_days: 28
-          keep_minimum_runs: 5
+          retain_days: 3
+          keep_minimum_runs: 3    
