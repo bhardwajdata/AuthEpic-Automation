@@ -7,7 +7,7 @@ node_modules/
 /playwright/.cache/
 /playwright/.auth/
 .env
-auth/user.json
+auth/
 tests/smart-report.html
 tests/test-history.json
 
