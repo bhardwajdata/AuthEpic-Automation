@@ -4,7 +4,7 @@ const { simpleParser } = require('mailparser');
 
 const APP_URL = process.env.EPICO_URL;
 const EMAIL = process.env.EPICO_EMAIL_ADDRESS;
-const EMAIL_PASS = process.env.EPICOE_MAIL_APP_PASSWORD;
+const EMAIL_PASS = process.env.EPICO_MAIL_APP_PASSWORD;
 
 const OTP_SENDER_EMAIL = 'pm@mindbowser.com';
 
