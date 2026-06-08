@@ -14,6 +14,11 @@ jobs:
     timeout-minutes: 60
     runs-on: ubuntu-latest
 
+    env:
+      EPICO_URL: ${{ secrets.EPICO_URL }}
+      EPICO_EMAIL_ADDRESS: ${{ secrets.EPICO_EMAIL_ADDRESS }}
+      EPICO_MAIL_APP_PASSWORD: ${{ secrets.EPICO_MAIL_APP_PASSWORD }}
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
