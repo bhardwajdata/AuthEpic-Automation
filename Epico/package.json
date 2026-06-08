@@ -9,9 +9,12 @@
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "1.59.1",
-    "@types/node": "^25.0.2"
+    "@types/node": "^25.0.2",
+    "dotenv": "^17.4.2"
   },
   "dependencies": {
+    "imapflow": "^1.3.6",
+    "mailparser": "^3.9.9",
     "playwright-smart-reporter": "^1.6.5"
   }
 }

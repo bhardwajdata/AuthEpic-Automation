@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig, devices } from '@playwright/test';
-import path from 'path';
+import dotenv from 'dotenv';
+dotenv.config();
 
 export default defineConfig({
   testDir: './tests',
@@ -47,7 +48,10 @@ export default defineConfig({
   },
 
   // @ts-ignore
-  globalSetup: './tests/setup.js',
+  // globalSetup: './tests/setup.js',
+  globalSetup: './tests/global-setup.js',
+
+
 
   /* Configure projects */
   projects: [
