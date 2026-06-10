@@ -1,0 +1,100 @@
+{
+  "runs": [],
+  "tests": {
+    "[chromium] Projectpage.spec.js::Mentee Page UI Verification": [
+      {
+        "passed": true,
+        "duration": 2871,
+        "timestamp": "2026-06-10T06:22:06.064Z",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Projectpage.spec.js::Project Page UI Verification": [
+      {
+        "passed": true,
+        "duration": 3036,
+        "timestamp": "2026-06-10T06:22:06.064Z",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Projectpage.spec.js::Inbox Page UI Verification": [
+      {
+        "passed": true,
+        "duration": 4513,
+        "timestamp": "2026-06-10T06:22:06.064Z",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Projectpage.spec.js::Goals Page UI Verification": [
+      {
+        "passed": true,
+        "duration": 2332,
+        "timestamp": "2026-06-10T06:22:06.064Z",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Projectpage.spec.js::WFH Page UI Verification": [
+      {
+        "passed": true,
+        "duration": 3383,
+        "timestamp": "2026-06-10T06:22:06.064Z",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Projectpage.spec.js::Leave Page UI Verification": [
+      {
+        "passed": true,
+        "duration": 3323,
+        "timestamp": "2026-06-10T06:22:06.064Z",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Projectpage.spec.js::Meetings Page UI Verification": [
+      {
+        "passed": true,
+        "duration": 2803,
+        "timestamp": "2026-06-10T06:22:06.064Z",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Projectpage.spec.js::Dashboard Page UI Verification": [
+      {
+        "passed": true,
+        "duration": 3733,
+        "timestamp": "2026-06-10T06:22:06.064Z",
+        "skipped": false,
+        "retry": 0
+      }
+    ],
+    "[chromium] Projectpage.spec.js::LMS Page UI Verification": [
+      {
+        "passed": true,
+        "duration": 9392,
+        "timestamp": "2026-06-10T06:22:06.064Z",
+        "skipped": false,
+        "retry": 0
+      }
+    ]
+  },
+  "summaries": [
+    {
+      "runId": "run-1781072510104",
+      "timestamp": "2026-06-10T06:21:50.104Z",
+      "total": 9,
+      "passed": 9,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0,
+      "slow": 0,
+      "duration": 15960,
+      "passRate": 100
+    }
+  ]
+}
