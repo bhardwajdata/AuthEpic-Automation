@@ -2,8 +2,6 @@ name: Regression Automation Run with Smart Report
 
 on:
   workflow_dispatch: {}
-  schedule:
-    - cron: '0 2 * * *'
 
 permissions:
   actions: write
